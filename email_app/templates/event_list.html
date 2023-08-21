@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event_List</title>
+</head>
+<body>
+    <h1>Event_List</h1>
+    <ul>
+        {% for event in events %}
+            <li><a href="{% url 'event_detail' event.id %}">{{ event.event_type }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
